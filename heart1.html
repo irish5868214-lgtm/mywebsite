@@ -59,9 +59,9 @@
 
         // ၁။ ပတ်ပတ်လည်က စာသားများ (နည်းနည်းသေးပေးထားတယ်)
         ctx.font = "bold 11px Arial";
-        ctx.fillStyle = "skyblue"; 
+        ctx.fillStyle = "blue"; 
         ctx.shadowBlur = 5;
-        ctx.shadowColor = "skyblue";
+        ctx.shadowColor = "blue";
 
         heartParticles.forEach((p) => {
             const vibration = Math.sin(Date.now() * 0.008 + p.randomOffset) * 1.5;
@@ -71,10 +71,10 @@
         });
 
         // ၂။ အလယ်က နာမည်
-        ctx.font = "bold 25px Arial, Pyidaungsu"; 
-        ctx.fillStyle = "skyblue";
+        ctx.font = "bold 28px Arial, Pyidaungsu"; 
+        ctx.fillStyle = "blue";
         ctx.shadowBlur = 15;
-        ctx.shadowColor = "skyblue";
+        ctx.shadowColor = "blue";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         
