@@ -154,23 +154,35 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
- 
-  <source src="beach.mp3" type="audio/mp3">
+<audio id="bgm" loop>
+  <source src="daylight.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+window.addEventListener("click", () => {
+  const music = document.getElementById("bgm");
+  music.play();
+}, { once: true });
+</script>
     <div id="page1" class="container">
-        <h1 style="color: var(--primary-pink); text-shadow: 1px 1px white;">Click Your Gift</h1>
-         <p style="color: #2F4F4F;">Happy birthday par ako Taurusလေးရှင့်🙄</p>
+        <h1 style="color: var(--primary-pink); text-shadow: 1px 1px white;">Choose Your Gift 🎁</h1>
+         <p style="color: #2F4F4F;">Happy birthday prr တီသော်❤️</p>
         
-    
+        <p style="color: #2F4F4F;">ပုံးလေးတွေကို တစ်ခုချင်းနှိပ်ကြည့်ပါဦးနော်</p>
         
         <div class="gift-container">
             <div class="gift-wrapper" onclick="openGift(0)">
                 <span class="gift-icon">🎁</span>
                 <span class="gift-label">Box 1</span>
             </div>
-           
-          
+            <div class="gift-wrapper" onclick="openGift(1)">
+                <span class="gift-icon">🎀</span>
+                <span class="gift-label">Box 2</span>
+            </div>
+            <div class="gift-wrapper" onclick="openGift(2)">
+                <span class="gift-icon">💝</span>
+                <span class="gift-label">Box 3</span>
+            </div>
         </div>
     </div>
 
@@ -184,19 +196,25 @@
                     <p id="display-wish"></p>
                 </div>
             </div>
-            
+            <button class="back-btn" onclick="goBack()">နောက်ထပ်ပုံးဖွင့်မယ် ➔</button>
         </div>
     </div>
 
     <script>
-        // လက်ဆောင်ပုံး တစ်ခုချင်းစီအတွက် data
+        
         const giftData = [
-            
             {
-                img: "cat4.jpg", 
-                wish: "<b> For You</b><br>မွေးနေ့ကစ၍ဝမ်းနည်းစရာတွေမကြုံရဘဲ ပျော်ရွှင်စွာနဲ့ပဲ ဘဝကိုပျော်ပျော်ရွှင်ရွှင်ကျန်းမာစွာနဲ့ ဖြတ်သန်းနိုင်ပါစေရှင့် ဘာပဲလုပ်လုပ် အစစအရာရာအဆင်ပြေပါစေနော်အမြဲ စိတ်ချမ်းသာနေရပါစေ ၊ မိဘအားကိုးရတဲ့သားလိမ္မာလေးဖြစ်ပါစေနော် ဆုတောင်းသမျှဆုတောင်းတွေလဲပြည့်ပါစေ အကိုရဲ့ ရည်မှန်းချက်တွေလဲ အကောင်အထည်ဖော်နိုင်မယ်လို့မျှော်လင့်ပါတယ် နောက်ဆုံးတစ်ခုက ညီမကို ဒီထက်မကပိုချစ်နိုင်ပါစေရှင့်🙄❤️"
+                img: "1.jpg", 
+                wish: "<b> Wish You</b><br>မွေးနေ့ကစပြီးနေကောင်းကျန်းမာပါစေ 🫶💕"
             },
-           
+            {
+                img: "2.jpg", 
+                wish: "<b> For You</b><br>ဂျပန်မှာအစစအရာရာအဆင်ပြေပါစေ 🫶💕"
+            },
+            {
+                img: "3.jpg",
+                wish: "<b> For You</b><br>ဖြစ်ချင်တာတွေနဲ့တစ်ထပ်တည်းကျပါစေ 🫶💕"
+            }
         ];
 
         function openGift(index) {
